@@ -34,7 +34,9 @@
 #         print('Login efetuado com sucesso')
 #     else:
 #         print('Login Inválido.')
-
+produto = []
+nome =''
+novoNome=''
 def ValidaAcesso(pUsuario, pSenha):
     # if((pUsuario == 'Aluno') and (pSenha == 'Proway')):
     #     print('Login efetuado com Sucesso')
@@ -46,9 +48,39 @@ def ValidaAcesso(pUsuario, pSenha):
         pSenha = input('Senha:')
     
 def MostraMenuPrincipal():
-    print('+'.ljust(34,'-')+'+')
-    print('| 1 - Cadastrar | 2 - Alterar     |')
-    print('| 3 - Excluir   | 4 - Visualizar  |')
-    print('|           5 - Sair              |')
-    print('+'.ljust(34,'-')+'+')
-    opcao = int(input('Opção desejada:'))
+    opcao = 0
+    while(opcao != 5):
+        print('+'.ljust(34,'-')+'+')
+        print('| 1 - Cadastrar | 2 - Alterar     |')
+        print('| 3 - Excluir   | 4 - Visualizar  |')
+        print('|           5 - Sair              |')
+        print('+'.ljust(34,'-')+'+')
+        opcao = int(input('Opção desejada:'))
+        if(opcao == 1):
+            nome = input('Nome do prduto desejado: ')
+            if(nome in produto):
+                print(nome,'Já esta cadastrado.')
+            else:
+                produto.append(nome)
+                print(nome,'Cadastrado com sucesso.')
+        elif(opcao == 2):
+            nome = input('Nome do produto que deseja alterar:')
+            if(nome in produto):
+                for x in range(0,len(produto)):
+                    if(produto[x]==nome):
+                        novoNome = input('Informe novo nome para ' + nome + ' ')
+                        produto[x]=novoNome
+                        break
+            else:
+                print(nome,'Não esta cadastrado.')   
+        elif(opcao == 3):
+            # Excluir
+            print('Excluir')
+        elif(opcao == 4):
+            # Visualizar
+            print('Visualizar')
+        elif(opcao == 5):
+            # Sair
+            print('Obrigado por usar o nosso sistema')
+        else:
+            print('Opação Invalida')
