@@ -74,11 +74,18 @@ def MostraMenuPrincipal():
             else:
                 print(nome,'Não esta cadastrado.')   
         elif(opcao == 3):
-            # Excluir
-            print('Excluir')
+            nome = input('Qual o produto que deseja excluir: ')
+            if (nome in produto):
+                produto.remove(nome)
+                print(nome,' excluido com Sucesso.')
+            else:
+                print(nome,'não esta cadastrado.')
         elif(opcao == 4):
             # Visualizar
-            print('Visualizar')
+            if(len(produto) == 0):
+                print('Não tem produto cadastrado.')
+            else:
+                print(produto)
         elif(opcao == 5):
             # Sair
             print('Obrigado por usar o nosso sistema')
