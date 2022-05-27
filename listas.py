@@ -97,4 +97,5 @@ for x in range(0,len(dias_semana)):
 if ( existe):
   print(dias_semana[x], 'fica na posiçao ', x)
 else:
-  print('Dia da semana inválido')  
+  print('Dia da semana inválido')
+    
