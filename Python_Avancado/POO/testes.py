@@ -18,7 +18,7 @@ def ValidaSoma(v1,v2):
     soma = v1 + v2
     assert(soma>=10)
 
-ValidaSoma(5,6)
+ValidaSoma(5,3)
 ValidaIdade(2002)
 ObtemEscola('Nome da escola')
 comparaValores(30,25)
