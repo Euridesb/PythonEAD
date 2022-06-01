@@ -2,7 +2,7 @@
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./Python_Avancado",
+        "./__pycache__",
         "-p",
         "test_*.py"
     ],
